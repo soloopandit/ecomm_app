@@ -6,7 +6,7 @@ import streamlit as st
 
 
 def main():
-    st.title("this is my ecom app ")
+    st.title("This is my first site ")
     st.sidebar.title("upload your file")
 
     uploaded_file = st.sidebar.file_uploader("upload your own file", type= ['csv', 'xlsx'])
@@ -41,3 +41,4 @@ if __name__ == "__main__":
     main()
 
     
+
