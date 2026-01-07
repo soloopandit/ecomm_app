@@ -1,12 +1,12 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
-import numpy as np
-import seaborn as sns 
+import numpy as npp
+import seaborn as sns
 import streamlit as st
 
 
 def main():
-    st.title("This is my first site ")
+    st.title("this is my ecom app ")
     st.sidebar.title("upload your file")
 
     uploaded_file = st.sidebar.file_uploader("upload your own file", type= ['csv', 'xlsx'])
@@ -15,8 +15,14 @@ def main():
         try :
             if uploaded_file.name.endswith('.csv'):
                 data = pd.read_csv(uploaded_file)
-            else :
+                #else :
+                #data = pd.read_excel(uploaded_file)
+
+            elif uploaded_file.name.endswith('.xlsx'):
                 data = pd.read_excel(uploaded_file)
+
+            else :
+                pass
 
             st.sidebar.success("file uploaded succesfully")
 
@@ -41,4 +47,3 @@ if __name__ == "__main__":
     main()
 
     
-
